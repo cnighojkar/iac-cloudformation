@@ -13,8 +13,8 @@ jobs:
         cloudformation_directory: "./"
         scanner: "all"
     - name: setup & Run
-       run:|
-       ls -alrt
+      run: |
+        ls -alrt
     - name: Archive the result so it can be downloaded
       uses: actions/upload-artifact@v3
       with:
