@@ -12,8 +12,12 @@ jobs:
       with:
         cloudformation_directory: "./"
         scanner: "all"
+    - name: setup & Run
+       run:|
+       ls -alrt
     - name: Archive the result so it can be downloaded
-        uses: actions/upload-artifact@v3
-        with:
-          name: cnf-security-artifact
-          path: ${{ github.workspace }}/cfn_security.sarif
+      uses: actions/upload-artifact@v3
+      with:
+        name: cnf-security-artifact
+        path: ${{ github.workspace }}/cfn_security.sarif
+  
